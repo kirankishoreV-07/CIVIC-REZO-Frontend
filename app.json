@@ -1,0 +1,75 @@
+{
+  "expo": {
+    "name": "CivicRezo",
+    "slug": "civic-rezo-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "description": "AI-powered civic complaint management system with location-based priority scoring",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "This app needs location access to calculate priority scores for civic complaints based on nearby infrastructure.",
+          "locationAlwaysPermission": "This app needs location access to calculate priority scores for civic complaints based on nearby infrastructure.",
+          "locationWhenInUsePermission": "This app needs location access to calculate priority scores for civic complaints based on nearby infrastructure."
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "This app needs camera access to capture images of civic issues for complaint submission."
+        }
+      ]
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.civicrezo",
+      "config": {
+        "googleMapsApiKey": "AIzaSyD44ORakAZledPQSeEwxk0Ohthgsc_eMQ0"
+      },
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "This app needs location access to calculate priority scores for civic complaints based on nearby infrastructure.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "This app needs location access to calculate priority scores for civic complaints based on nearby infrastructure.",
+        "NSCameraUsageDescription": "This app needs camera access to capture images of civic issues for complaint submission.",
+        "NSAppTransportSecurity": {
+          "NSAllowsArbitraryLoads": true
+        }
+      }
+    },
+    "android": {
+      "package": "com.civicrezo",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyD44ORakAZledPQSeEwxk0Ohthgsc_eMQ0"
+        }
+      },
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "CAMERA",
+        "WRITE_EXTERNAL_STORAGE",
+        "READ_EXTERNAL_STORAGE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "67152498-2d4d-454e-81b0-3e50ca977322"
+      }
+    }
+  }
+}
